@@ -1,0 +1,35 @@
+# 指定 Python 项目的构建工具。
+# 配置后，uv sync 会把 src/littrace 安装进虚拟环境。
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+# 明确指定要打包的 Python 源码目录。
+# 这是采用 src 布局时的常用配置。
+[tool.hatch.build.targets.wheel]
+packages = ["src/littrace"]
+
+[project]
+# 项目名与 src/littrace 保持一致。
+name = "littrace"
+version = "0.1.0"
+requires-python = ">=3.12"
+dependencies = [
+    "alembic>=1.20.0",
+    "fastapi>=0.143.0",
+    "openai>=3.28.0",
+    "psycopg[binary]>=3.3.6",
+    "pydantic>=2.14.0",
+    "pydantic-settings>=2.15.0",
+    "pymupdf>=1.28.2",
+    "python-multipart>=0.0.32",
+    "sqlalchemy>=2.1.4",
+    "typer>=0.27.3",
+    "uvicorn[standard]>=0.54.0",
+]
+
+[dependency-groups]
+dev = [
+    "httpx>=0.28.1",
+    "pytest>=9.1.1",
+]
