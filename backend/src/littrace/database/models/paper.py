@@ -15,6 +15,10 @@ from sqlalchemy import (
 from sqlalchemy.dialects.postgresql import (
     UUID as PostgresUUID,
 )
+from littrace.database.models.paper_chunk import (
+    PaperChunkRecord,
+)
+from littrace.ingestion.chunker import chunk_pages
 from sqlalchemy.orm import Mapped, mapped_column
 
 from littrace.database.base import Base

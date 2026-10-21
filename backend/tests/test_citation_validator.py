@@ -12,6 +12,7 @@ def create_chunk() -> PaperChunk:
         chunk_id="paper-001-p8-c3",
         paper_id="paper-001",
         page_number=8,
+        chunk_index=3,
         text=(
             "The primary limi-\n"
             "tation is the computational cost."

@@ -1,0 +1,21 @@
+:root {
+  font-family: Inter, 'Segoe UI', 'Microsoft YaHei', Arial, sans-serif;
+  color: #171717;
+  background: #f8f8f6;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  --ink: #171717;
+  --muted: #696969;
+  --light: #929292;
+  --line: #e7e7e4;
+  --line-strong: #d8d8d5;
+  --surface: #fff;
+  --soft: #f7f7f5;
+  --danger: #a33c35;
+  --success: #356348;
+}
+* { box-sizing: border-box; }
+body { min-width: 320px; margin: 0; }
+button, input, textarea, select { font-family: inherit; }
+button:focus-visible, a:focus-visible, summary:focus-visible { outline: 2px solid var(--ink); outline-offset: 3px; }

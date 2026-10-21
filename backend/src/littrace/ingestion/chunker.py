@@ -51,6 +51,9 @@ def chunk_pages(
                         chunk_id=chunk_id,
                         paper_id=paper_id,
                         page_number=page.page_number,
+                        # chunk_number 每进入新页面都会从 1 开始，
+                        # 因此它表示“当前页中的块序号”。
+                        chunk_index=chunk_number,
                         text=chunk_text
                     )
                 )

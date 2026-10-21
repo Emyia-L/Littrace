@@ -52,3 +52,22 @@ def test_chunks_do_not_cross_pages() -> None:
         len(chunk.text) <= 40
         for chunk in chunks
     )
+
+    # 每一页的第一个块都应该从 1 开始编号。
+    assert page_one_chunks[0].chunk_index == 1
+    assert page_two_chunks[0].chunk_index == 1
+
+    # 每页内部的 chunk_index 应连续递增。
+    assert [
+        chunk.chunk_index
+        for chunk in page_one_chunks
+    ] == list(
+        range(1, len(page_one_chunks) + 1)
+    )
+
+    assert [
+        chunk.chunk_index
+        for chunk in page_two_chunks
+    ] == list(
+        range(1, len(page_two_chunks) + 1)
+    )

@@ -18,6 +18,7 @@ dependencies = [
     "alembic>=1.20.0",
     "fastapi>=0.143.0",
     "openai>=3.28.0",
+    "pgvector>=0.5.1",
     "psycopg[binary]>=3.3.6",
     "pydantic>=2.14.0",
     "pydantic-settings>=2.15.0",
@@ -26,6 +27,8 @@ dependencies = [
     "sqlalchemy>=2.1.4",
     "typer>=0.27.3",
     "uvicorn[standard]>=0.54.0",
+    "redis>=5,<9",
+    "rq>=2,<3",
 ]
 
 [dependency-groups]

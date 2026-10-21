@@ -8,6 +8,7 @@ from littrace.domain.models import (
     PaperChunk
 )
 from littrace.model_client import create_model_client
+from littrace.research.model_usage import tracked_model_call
 
 SYSTEM_PROMPT = """
 You are the evidence extraction component of LitTrace.
@@ -24,6 +25,9 @@ Rules:
 7. A claim may summarize the quote, but the quote must remain verbatim.
 8. If there is no direct evidence, return an empty evidence_cards list.
 9. Never invent a paper, page number, chunk ID, quotation, or result.
+10. Every factual detail in a claim must be directly supported by its quote.
+11. Do not add facts to the claim from surrounding text unless the quote itself contains them.
+12. If no single verbatim quote supports the complete claim, omit that evidence card.
 
 Required JSON structure:
 {
@@ -81,28 +85,31 @@ def extract_evidence(
     }
 
     settings = get_settings()
+    # 统一包装调用，以便研究运行汇总 token、耗时和失败次数。
+    # 此处保留普通客户端写法，以兼容现有的轻量测试客户端。
     client = create_model_client()
-
-    response = client.chat.completions.create(
+    response = tracked_model_call(
+        component="evidence_extractor",
         model=settings.deepseek_model,
-        messages=[
-            {
-                "role": "system",
-                "content": SYSTEM_PROMPT
-            },
-            {
-                "role": "user",
-                "content": json.dumps(
-                    user_prompt, 
-                    ensure_ascii=False
-                )
-            }
-        ],
-        response_format={
-            "type": "json_object",
-        },
-        temperature=0.0,
-        max_tokens=1600,
+        call=lambda: client.chat.completions.create(
+            model=settings.deepseek_model,
+            messages=[
+                {
+                    "role": "system",
+                    "content": SYSTEM_PROMPT,
+                },
+                {
+                    "role": "user",
+                    "content": json.dumps(
+                        user_prompt,
+                        ensure_ascii=False,
+                    ),
+                },
+            ],
+            response_format={"type": "json_object"},
+            temperature=0.0,
+            max_tokens=1600,
+        ),
     )
 
     content = response.choices[0].message.content

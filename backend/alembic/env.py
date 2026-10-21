@@ -11,6 +11,25 @@ from littrace.database.models.project import (
     ResearchProject,
 )
 from littrace.database.models.paper import Paper
+# 导入时，SQLAlchemy 会将 paper_chunks 表
+# 注册到 Base.metadata，供 Alembic 比较表结构。
+from littrace.database.models.paper_chunk import (
+    PaperChunkRecord,
+)
+
+# 导入模型时，SQLAlchemy 会把 research_runs 表
+# 注册到 Base.metadata，供 Alembic 比较数据库结构。
+from littrace.database.models.research_run import (
+    ResearchRun,
+)
+# 导入证据模型，将 evidence_records 注册到 Base.metadata。
+from littrace.database.models.evidence import EvidenceRecord
+from littrace.database.models.evidence_review import EvidenceReview
+from littrace.database.models.evidence_comparison import EvidenceComparisonReview
+
+from littrace.database.models.agent_step import AgentStepRecord
+from littrace.database.models.run_memory import ResearchRunMemory
+from littrace.database.models.project_synthesis import ProjectSynthesis
 
 
 config = context.config
@@ -38,6 +57,14 @@ config.set_main_option(
 _ = (
     ResearchProject,
     Paper,
+    PaperChunkRecord,
+    ResearchRun,
+    EvidenceRecord,
+    EvidenceReview,
+    EvidenceComparisonReview,
+    AgentStepRecord,
+    ResearchRunMemory,
+    ProjectSynthesis,
 )
 
 target_metadata = Base.metadata
