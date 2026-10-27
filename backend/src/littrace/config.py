@@ -1,6 +1,6 @@
 from functools import lru_cache
 
-from pydantic import SecretStr
+from pydantic import Field, SecretStr
 from pydantic_settings import (
     BaseSettings,
     SettingsConfigDict,
@@ -35,6 +35,12 @@ class Settings(BaseSettings):
     # Redis 连接地址可能含密码，使用 SecretStr 避免它被意外打印到日志。
     # 暂时允许不配置：在切换执行入口前，现有 BackgroundTasks 仍可运行。
     redis_url: SecretStr | None = None
+
+    # 查询 Embedding 缓存默认复用 REDIS_URL；生产环境可指定独立的缓存 Redis。
+    # 未配置任何 Redis 地址时，Embedding 请求仍直接访问模型服务。
+    embedding_cache_redis_url: SecretStr | None = None
+    embedding_cache_enabled: bool = True
+    embedding_cache_ttl_seconds: int = Field(default=86400, ge=60)
 
     model_config = SettingsConfigDict(
         env_file=".env",

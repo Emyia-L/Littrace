@@ -1,0 +1,30 @@
+{
+  "case_id": "cross-tools-v1",
+  "question": "两篇论文如何组织专业工具及其调用？",
+  "paper_sha256": [
+    "3b97df0a3d4fa1c73cd7ad97b60ea129388ece2b6b505aefa30a809b67946993",
+    "ef35c9750d956e445f53d907408c23ef7afd7c07678520761b3ce0e2ae25c627"
+  ],
+  "gold_quotes": [
+    {
+      "paper_sha256": "3b97df0a3d4fa1c73cd7ad97b60ea129388ece2b6b505aefa30a809b67946993",
+      "page_number": 2,
+      "quote": "We implemented 18 tools, as shown in Fig. 1b and described in ‘Tools’, that endow ChemCrow not only with knowledge about molecular and reaction properties but also with the capacity to directly execute tasks in a physical lab."
+    },
+    {
+      "paper_sha256": "3b97df0a3d4fa1c73cd7ad97b60ea129388ece2b6b505aefa30a809b67946993",
+      "page_number": 2,
+      "quote": "After the reasoning in the Thought step, the LLM requests a tool (preceded by the keyword ‘Action’) and the input for this tool (with the keyword ‘Action Input’). The text generation then pauses, and the program attempts to execute the requested function using the provided input."
+    },
+    {
+      "paper_sha256": "ef35c9750d956e445f53d907408c23ef7afd7c07678520761b3ce0e2ae25c627",
+      "page_number": 3,
+      "quote": "Specifically, we construct a comprehensive library of tools categorized into three distinct sets: (1) Video tools, (2) Au- dio tools, and (3) Event tools."
+    },
+    {
+      "paper_sha256": "ef35c9750d956e445f53d907408c23ef7afd7c07678520761b3ce0e2ae25c627",
+      "page_number": 5,
+      "quote": "Instead, we formulate an iterative Think-Act- Observe-Reflect cycle, empowering the agent to actively orchestrate reasoning, planning, and execution across both modalities (audio and video)."
+    }
+  ]
+}

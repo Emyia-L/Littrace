@@ -1,0 +1,27 @@
+{
+  "case_id": "robotwin-results-v1",
+  "question": "论文如何评估领域随机化与生成数据对鲁棒性的作用？",
+  "paper_sha256": ["316ae82a97968e1a2d88540665401645a190d2699d7d8652e8fc0053ba609bda"],
+  "gold_quotes": [
+    {
+      "paper_sha256": "316ae82a97968e1a2d88540665401645a190d2699d7d8652e8fc0053ba609bda",
+      "page_number": 5,
+      "quote": "To enhance policy robustness to real-world variability, we apply domain randomization along five dimensions: (1) cluttered distractor objects, (2) background textures, (3) lighting conditions, (4) tabletop heights, and (5) diverse language instructions."
+    },
+    {
+      "paper_sha256": "316ae82a97968e1a2d88540665401645a190d2699d7d8652e8fc0053ba609bda",
+      "page_number": 2,
+      "quote": "With a mix of large-scale synthetic data and only 10 real demonstrations, a vision–language–action (VLA) model achieves a 367% relative improvement over the 10-demo baseline."
+    },
+    {
+      "paper_sha256": "316ae82a97968e1a2d88540665401645a190d2699d7d8652e8fc0053ba609bda",
+      "page_number": 2,
+      "quote": "Even without real data, zero-shot models trained solely on synthetic data obtain a 228% relative gain, highlighting the effectiveness of our dataset in strengthening sim-to-real transfer and robustness to environmental variations."
+    },
+    {
+      "paper_sha256": "316ae82a97968e1a2d88540665401645a190d2699d7d8652e8fc0053ba609bda",
+      "page_number": 8,
+      "quote": "We evaluate performance with four metrics: ASR (Average Success Rate), Top5-ASR (success over the top-5 candidates per task), CR-Iter (average refinement iterations before termination), and Token (average number of tokens in generated policy code)."
+    }
+  ]
+}

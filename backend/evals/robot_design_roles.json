@@ -1,0 +1,24 @@
+{
+  "case_id": "robot-design-role-v1",
+  "question": "论文中的语言模型和人分别承担什么设计工作？",
+  "paper_sha256": [
+    "a3e58af6fdcf3b49fa55224ebcf086e1f77800b91ecbc58d0601fd93d5b28686"
+  ],
+  "gold_quotes": [
+    {
+      "paper_sha256": "a3e58af6fdcf3b49fa55224ebcf086e1f77800b91ecbc58d0601fd93d5b28686",
+      "page_number": 1,
+      "quote": "In the first high-level phase, the computer and the human collaborate on a conceptual level, discussing ideas and outlining the specifications for the robot design while in the second phase the physical implementation of the design specifications takes place."
+    },
+    {
+      "paper_sha256": "a3e58af6fdcf3b49fa55224ebcf086e1f77800b91ecbc58d0601fd93d5b28686",
+      "page_number": 2,
+      "quote": "Although LLMs can currently not generate entire CAD models, test code, or automatically fabricate the robot"
+    },
+    {
+      "paper_sha256": "a3e58af6fdcf3b49fa55224ebcf086e1f77800b91ecbc58d0601fd93d5b28686",
+      "page_number": 2,
+      "quote": "The human is therefore relegated to the technician role, polishing the code proposed by the LLM, finalizing the CAD, and fabricating the robot."
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+{
+  "case_id": "no-answer-omni-chinese-latency-v1",
+  "question": "OmniAgent 在中文语音数据集上的平均推理延迟是多少毫秒？",
+  "paper_sha256": ["ef35c9750d956e445f53d907408c23ef7afd7c07678520761b3ce0e2ae25c627"],
+  "gold_quotes": []
+}

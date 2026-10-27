@@ -45,7 +45,7 @@ def test_tracked_model_call_collects_tokens_and_estimated_cost():
     ) == 5_000
 
 
-def test_failed_model_call_is_counted_without_leaking_error_content():
+def test_failed_model_call_is_counted_without_leaking_error_content(caplog):
     collector = ModelUsageCollector()
     token = activate_model_usage(collector)
     try:
@@ -54,7 +54,7 @@ def test_failed_model_call_is_counted_without_leaking_error_content():
                 component="claim_validator",
                 model="test-model",
                 call=lambda: (_ for _ in ()).throw(
-                    RuntimeError("provider unavailable")
+                    RuntimeError("provider unavailable secret-request-body")
                 ),
             )
     finally:
@@ -63,6 +63,9 @@ def test_failed_model_call_is_counted_without_leaking_error_content():
     assert len(collector.calls) == 1
     assert collector.calls[0].succeeded is False
     assert collector.calls[0].total_tokens == 0
+    assert "component=claim_validator" in caplog.text
+    assert "error_type=RuntimeError" in caplog.text
+    assert "secret-request-body" not in caplog.text
 
 
 def test_active_collector_can_be_restored_after_nested_scope():

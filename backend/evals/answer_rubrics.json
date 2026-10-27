@@ -1,0 +1,209 @@
+{
+  "schema_version": 1,
+  "annotation_status": "AI-assisted first pass; independent human review pending",
+  "quote_indices": "1-based positions in the matching EvalCase.gold_quotes array",
+  "cases": [
+    {
+      "case_id": "omniagent-main-problem-v1",
+      "expected_behavior": "answer",
+      "must_cover": [
+        {"point": "现有全模态模型细粒度跨模态理解和对齐存在局限", "quote_indices": [1]},
+        {"point": "固定或静态方法难以动态规划和精细理解", "quote_indices": [2]},
+        {"point": "OmniAgent 用主动感知和自反思来改进跨模态对齐", "quote_indices": [3]}
+      ],
+      "must_not_claim": ["论文已证明所有多模态任务都被彻底解决"]
+    },
+    {
+      "case_id": "omni-audio-guided-v1",
+      "expected_behavior": "answer",
+      "must_cover": [
+        {"point": "音频事件定位提供后续细粒度分析的时间锚点", "quote_indices": [1]},
+        {"point": "音频以较低成本提供全局事件语义", "quote_indices": [2]},
+        {"point": "按特定查询定位精确时间戳，缩小视觉检查范围", "quote_indices": [3]}
+      ],
+      "must_not_claim": ["仅靠音频就能完成所有视觉细节判断"]
+    },
+    {
+      "case_id": "autonomy-problem-v1",
+      "expected_behavior": "answer",
+      "must_cover": [
+        {"point": "重复任务可自动化，但其他情境仍需人工控制，因此需切换自主性", "quote_indices": [1]},
+        {"point": "认知负荷评价过度依赖主观指标", "quote_indices": [2]},
+        {"point": "通信延迟和可靠性问题尚未充分解决", "quote_indices": [3]}
+      ],
+      "must_not_claim": ["论文认为完全自主系统已可处理所有不确定环境"]
+    },
+    {
+      "case_id": "autonomy-future-v1",
+      "expected_behavior": "answer",
+      "must_cover": [
+        {"point": "基座与机械臂的自主性需要联合控制", "quote_indices": [1]},
+        {"point": "VR 等界面可降低认知负荷并增强环境感知", "quote_indices": [2]},
+        {"point": "延迟补偿与手动遥操作结合，提高远距系统韧性", "quote_indices": [3]},
+        {"point": "探索利用语言模型的上下文感知动态调整自主等级", "quote_indices": [4]}
+      ],
+      "must_not_claim": ["这些方向都已在论文中通过大规模现场实验验证"]
+    },
+    {
+      "case_id": "chemcrow-problem-v1",
+      "expected_behavior": "answer",
+      "must_cover": [
+        {"point": "通用语言模型处理化学任务困难，且缺少外部知识来源", "quote_indices": [1]},
+        {"point": "简单数学和化学操作也可能出错", "quote_indices": [2]},
+        {"point": "专门工具扩展分子、反应知识并连接实验任务", "quote_indices": [3]}
+      ],
+      "must_not_claim": ["ChemCrow 完全消除了化学事实错误"]
+    },
+    {
+      "case_id": "chemcrow-tools-v1",
+      "expected_behavior": "answer",
+      "must_cover": [
+        {"point": "系统集成 18 个专家设计工具，包括实验室任务执行能力", "quote_indices": [1]},
+        {"point": "工具观察返回模型，形成反复思考与行动循环", "quote_indices": [2]},
+        {"point": "论文报告在较复杂任务上优于无工具模型", "quote_indices": [3]}
+      ],
+      "must_not_claim": ["工具输出永远准确且无需专家复核"]
+    },
+    {
+      "case_id": "robot-design-role-v1",
+      "expected_behavior": "answer",
+      "must_cover": [
+        {"point": "人和模型在概念阶段讨论并确定设计规格", "quote_indices": [1]},
+        {"point": "当前模型不能独立完成完整 CAD、代码测试和制造", "quote_indices": [2]},
+        {"point": "人负责完善代码、CAD 并制造机器人", "quote_indices": [3]}
+      ],
+      "must_not_claim": ["论文中的机器人由模型无需人工干预地完成制造"]
+    },
+    {
+      "case_id": "robot-design-limits-v1",
+      "expected_behavior": "answer",
+      "must_cover": [
+        {"point": "不能独立产出完整 CAD、测试代码和实体制造", "quote_indices": [1]},
+        {"point": "其创造力是否超越已有科学知识仍有争议", "quote_indices": [2]},
+        {"point": "模型偏好可能缩小新技术探索范围", "quote_indices": [3]}
+      ],
+      "must_not_claim": ["论文已证明语言模型绝不可能产生任何新设计"]
+    },
+    {
+      "case_id": "palme-grounding-v1",
+      "expected_behavior": "answer",
+      "must_cover": [
+        {"point": "图像与状态估计进入与语言 token 同类的嵌入空间", "quote_indices": [1]},
+        {"point": "连续观测编码为与词嵌入同维度的向量序列", "quote_indices": [2]},
+        {"point": "观测向量与普通文本嵌入交织为模型前缀", "quote_indices": [3]}
+      ],
+      "must_not_claim": ["PaLM-E 仅把传感数据转换为纯文本描述后输入模型"]
+    },
+    {
+      "case_id": "palme-tasks-v1",
+      "expected_behavior": "answer",
+      "must_cover": [
+        {"point": "三个机器人环境包括任务动作规划、桌面推动和移动操作", "quote_indices": [1]},
+        {"point": "每个环境检验规划与视觉问答任务", "quote_indices": [2]},
+        {"point": "部分环境纳入真实机器人控制环并应对扰动", "quote_indices": [3]}
+      ],
+      "must_not_claim": ["全部实验均只在模拟环境中完成"]
+    },
+    {
+      "case_id": "ecot-problem-v1",
+      "expected_behavior": "answer",
+      "must_cover": [
+        {"point": "直接提示标准 VLA 做思维链受限于训练样本较简单", "quote_indices": [1]},
+        {"point": "机器人规划必须落到环境观测与自身状态", "quote_indices": [2]},
+        {"point": "包含视觉和低层状态的推理优于只做语言子任务规划", "quote_indices": [3]}
+      ],
+      "must_not_claim": ["论文认为只靠语言子任务分解已经足够"]
+    },
+    {
+      "case_id": "ecot-method-v1",
+      "expected_behavior": "answer",
+      "must_cover": [
+        {"point": "交错执行语言子任务分解和场景、机器人状态接地推理", "quote_indices": [1]},
+        {"point": "使用带有观测—推理—动作的训练序列", "quote_indices": [2]},
+        {"point": "论文报告 OpenVLA 绝对成功率提升 28 个百分点，限定于所述泛化任务", "quote_indices": [3]}
+      ],
+      "must_not_claim": ["28% 是所有机器人任务上的相对成功率提升"]
+    },
+    {
+      "case_id": "robotwin-data-generation-v1",
+      "expected_behavior": "answer",
+      "must_cover": [
+        {"point": "代码生成 Agent 与视觉语言观察 Agent 构成闭环", "quote_indices": [1]},
+        {"point": "执行日志与局部诊断共同指导代码修复", "quote_indices": [2]},
+        {"point": "五维领域随机化增加训练环境多样性", "quote_indices": [3]}
+      ],
+      "must_not_claim": ["系统完全不使用仿真执行反馈"]
+    },
+    {
+      "case_id": "robotwin-results-v1",
+      "expected_behavior": "answer",
+      "must_cover": [
+        {"point": "采用五个维度的领域随机化", "quote_indices": [1]},
+        {"point": "合成数据加 10 条真实示范相对 10 条真实示范基线提升 367%", "quote_indices": [2]},
+        {"point": "仅用合成数据的零样本模型报告相对提升 228%", "quote_indices": [3]},
+        {"point": "评测还使用 ASR、Top5-ASR、CR-Iter 和 Token 指标", "quote_indices": [4]}
+      ],
+      "must_not_claim": ["367% 或 228% 是绝对成功率百分点提升"]
+    },
+    {
+      "case_id": "cross-embodied-v1",
+      "expected_behavior": "answer",
+      "expected_relation": "complementary",
+      "must_cover": [
+        {"point": "PaLM-E 把连续具身观测注入语言嵌入空间", "quote_indices": [1]},
+        {"point": "PaLM-E 输出文本决策供机器人执行", "quote_indices": [2]},
+        {"point": "ECoT 在行动前交错语义与多模态接地推理", "quote_indices": [3]},
+        {"point": "ECoT 用观测—推理—动作序列训练", "quote_indices": [4]}
+      ],
+      "comparison_limitation": "两篇论文任务和模型不同，不得把各自结果当作同一基准直接排名。",
+      "must_not_claim": ["两篇论文在同一测试集上证明 ECoT 胜过 PaLM-E"]
+    },
+    {
+      "case_id": "cross-tools-v1",
+      "expected_behavior": "answer",
+      "expected_relation": "complementary",
+      "must_cover": [
+        {"point": "ChemCrow 集成面向化学的 18 个专门工具", "quote_indices": [1]},
+        {"point": "ChemCrow 在思考、调用和观察中迭代", "quote_indices": [2]},
+        {"point": "OmniAgent 将工具分为视频、音频和事件三组", "quote_indices": [3]},
+        {"point": "OmniAgent 采用思考—行动—观察—反思循环", "quote_indices": [4]}
+      ],
+      "comparison_limitation": "领域与工具功能不同，不能从工具数量直接推断系统性能优劣。",
+      "must_not_claim": ["两系统在同一任务上的准确率已直接比较"]
+    },
+    {
+      "case_id": "cross-human-role-v1",
+      "expected_behavior": "answer",
+      "expected_relation": "complementary",
+      "must_cover": [
+        {"point": "可变自主性综述强调不确定环境仍需人机协作", "quote_indices": [1]},
+        {"point": "控制权需要在人与自主系统之间切换", "quote_indices": [2]},
+        {"point": "机器人设计案例由人与模型共同完成概念讨论", "quote_indices": [3]},
+        {"point": "实体实现仍由人承担", "quote_indices": [4]}
+      ],
+      "comparison_limitation": "前者讨论运行控制中的自主等级，后者讨论设计与制造分工；不可混成相同的自主性指标。",
+      "must_not_claim": ["两篇论文都证明人可以从机器人系统中完全退出"]
+    },
+    {
+      "case_id": "no-answer-omni-chinese-latency-v1",
+      "expected_behavior": "insufficient_evidence",
+      "must_cover": [],
+      "abstention_reason": "该 PDF 未报告中文语音数据集的毫秒级平均推理延迟。可以说明未找到此特定数值，但不能猜测。",
+      "must_not_claim": ["给出未经本文支持的毫秒数"]
+    },
+    {
+      "case_id": "no-answer-chemcrow-api-cost-v1",
+      "expected_behavior": "insufficient_evidence",
+      "must_cover": [],
+      "abstention_reason": "该 PDF 未报告所有实验的 API 调用总美元费用。",
+      "must_not_claim": ["自行估算并当作论文报告的总费用"]
+    },
+    {
+      "case_id": "no-answer-cross-same-benchmark-v1",
+      "expected_behavior": "insufficient_evidence",
+      "must_cover": [],
+      "abstention_reason": "两篇论文没有共同、同训练条件的机器人测试集，不能计算可比成功率差值。",
+      "must_not_claim": ["直接相减两篇论文各自的成功率并称为同一基准差值"]
+    }
+  ]
+}

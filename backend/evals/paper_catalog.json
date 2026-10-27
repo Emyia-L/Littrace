@@ -1,0 +1,83 @@
+{
+  "schema_version": 1,
+  "source_directory": "samples",
+  "checked_on": "2026-10-22",
+  "chunker": {
+    "max_chars": 1200,
+    "overlap": 150
+  },
+  "papers": [
+    {
+      "file": "01_MiniReview_Variable_Autonomy_2025.pdf",
+      "title": "A mini-review on mobile manipulators with Variable Autonomy",
+      "sha256": "6eddc3e934d3e6bb0558b57fb4807a9594ffd223d42e1eed7825394fa4030490",
+      "size_bytes": 277394,
+      "page_count": 8,
+      "text_pages": 8,
+      "chunk_count": 46,
+      "sparse_pages": []
+    },
+    {
+      "file": "02_ChemCrow_NatureMI_2024.pdf",
+      "title": "Augmenting large language models with chemistry tools",
+      "sha256": "3b97df0a3d4fa1c73cd7ad97b60ea129388ece2b6b505aefa30a809b67946993",
+      "size_bytes": 2396611,
+      "page_count": 13,
+      "text_pages": 11,
+      "chunk_count": 67,
+      "sparse_pages": [12, 13],
+      "note": "Pages 12-13 are image-based journal reporting-summary pages; exclude them from text-only gold quotes unless OCR is added."
+    },
+    {
+      "file": "03_Robot_Design_AuthorVersion_2023.pdf",
+      "title": "Can Large Language Models Design a Robot?",
+      "sha256": "a3e58af6fdcf3b49fa55224ebcf086e1f77800b91ecbc58d0601fd93d5b28686",
+      "size_bytes": 17711423,
+      "page_count": 4,
+      "text_pages": 4,
+      "chunk_count": 16,
+      "sparse_pages": []
+    },
+    {
+      "file": "04_PaLM-E_ICML_2023.pdf",
+      "title": "PaLM-E: An Embodied Multimodal Language Model",
+      "sha256": "dbae359cd8028ba2065d360c06a1d3124e51f46fa038e9b4c69f2f6aa3564e11",
+      "size_bytes": 10162433,
+      "page_count": 20,
+      "text_pages": 20,
+      "chunk_count": 90,
+      "sparse_pages": []
+    },
+    {
+      "file": "05_Embodied_Chain_of_Thought_CoRL_2024.pdf",
+      "title": "Robotic Control via Embodied Chain-of-Thought Reasoning",
+      "sha256": "79f82ea9ed37a16bfbf42a7cdf2ab766dc1174a3a092700bb1aa91dc8da4917e",
+      "size_bytes": 4985014,
+      "page_count": 25,
+      "text_pages": 25,
+      "chunk_count": 100,
+      "sparse_pages": []
+    },
+    {
+      "file": "2506.18088v2.pdf",
+      "title": "RoboTwin 2.0: A Scalable Data Generator and Benchmark with Strong Domain Randomization for Robust Bimanual Robotic Manipulation",
+      "sha256": "316ae82a97968e1a2d88540665401645a190d2699d7d8652e8fc0053ba609bda",
+      "size_bytes": 7993708,
+      "page_count": 24,
+      "text_pages": 24,
+      "chunk_count": 87,
+      "sparse_pages": []
+    },
+    {
+      "file": "chinese-paper.pdf",
+      "title": "Active Perception Agent for Omnimodal Audio-Video Understanding",
+      "sha256": "ef35c9750d956e445f53d907408c23ef7afd7c07678520761b3ce0e2ae25c627",
+      "size_bytes": 15606371,
+      "page_count": 22,
+      "text_pages": 22,
+      "chunk_count": 104,
+      "sparse_pages": [],
+      "note": "Despite the filename, the article text is in English."
+    }
+  ]
+}

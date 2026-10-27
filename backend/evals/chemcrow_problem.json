@@ -1,0 +1,24 @@
+{
+  "case_id": "chemcrow-problem-v1",
+  "question": "ChemCrow 要弥补语言模型在化学任务中的哪些不足？",
+  "paper_sha256": [
+    "3b97df0a3d4fa1c73cd7ad97b60ea129388ece2b6b505aefa30a809b67946993"
+  ],
+  "gold_quotes": [
+    {
+      "paper_sha256": "3b97df0a3d4fa1c73cd7ad97b60ea129388ece2b6b505aefa30a809b67946993",
+      "page_number": 1,
+      "quote": "Large language models (LLMs) have shown strong performance in tasks across domains but struggle with chemistry-related problems. These models also lack access to external knowledge sources, limiting their usefulness in scientific applications."
+    },
+    {
+      "paper_sha256": "3b97df0a3d4fa1c73cd7ad97b60ea129388ece2b6b505aefa30a809b67946993",
+      "page_number": 1,
+      "quote": "Nevertheless, it is crucial to recognize the limitations of LLMs, which often struggle with seemingly simple tasks like basic mathematics and chemistry operations"
+    },
+    {
+      "paper_sha256": "3b97df0a3d4fa1c73cd7ad97b60ea129388ece2b6b505aefa30a809b67946993",
+      "page_number": 2,
+      "quote": "We implemented 18 tools, as shown in Fig. 1b and described in ‘Tools’, that endow ChemCrow not only with knowledge about molecular and reaction properties but also with the capacity to directly execute tasks in a physical lab."
+    }
+  ]
+}

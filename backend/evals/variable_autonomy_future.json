@@ -1,0 +1,27 @@
+{
+  "case_id": "autonomy-future-v1",
+  "question": "综述提出了哪些后续研究方向？",
+  "paper_sha256": ["6eddc3e934d3e6bb0558b57fb4807a9594ffd223d42e1eed7825394fa4030490"],
+  "gold_quotes": [
+    {
+      "paper_sha256": "6eddc3e934d3e6bb0558b57fb4807a9594ffd223d42e1eed7825394fa4030490",
+      "page_number": 5,
+      "quote": "First, better system integration is essential, with research focusing on enabling simultaneous control of both the base and manipulator, whether coupled or decoupled."
+    },
+    {
+      "paper_sha256": "6eddc3e934d3e6bb0558b57fb4807a9594ffd223d42e1eed7825394fa4030490",
+      "page_number": 5,
+      "quote": "Second, Virtual Reality (VR) offers significant potential in this domain. Current studies already highlight VR’s role in reducing cognitive load and enhancing environmental awareness"
+    },
+    {
+      "paper_sha256": "6eddc3e934d3e6bb0558b57fb4807a9594ffd223d42e1eed7825394fa4030490",
+      "page_number": 6,
+      "quote": "By integrating onboard autonomous compensation algorithms with manual teleoperation, long-distance systems could benefit from reduced errors and delays. Switching between autonomous and manual modes could offer additional resilience."
+    },
+    {
+      "paper_sha256": "6eddc3e934d3e6bb0558b57fb4807a9594ffd223d42e1eed7825394fa4030490",
+      "page_number": 6,
+      "quote": "Research has shown their potential for contextual awareness (Kim et al., 2023), which could be leveraged to enhance task awareness and dynamically adjust autonomy levels based on previously unconsidered data."
+    }
+  ]
+}

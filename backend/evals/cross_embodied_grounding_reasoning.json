@@ -1,0 +1,30 @@
+{
+  "case_id": "cross-embodied-v1",
+  "question": "两篇论文如何分别处理具身信息的输入与行动前推理？",
+  "paper_sha256": [
+    "dbae359cd8028ba2065d360c06a1d3124e51f46fa038e9b4c69f2f6aa3564e11",
+    "79f82ea9ed37a16bfbf42a7cdf2ab766dc1174a3a092700bb1aa91dc8da4917e"
+  ],
+  "gold_quotes": [
+    {
+      "paper_sha256": "dbae359cd8028ba2065d360c06a1d3124e51f46fa038e9b4c69f2f6aa3564e11",
+      "page_number": 3,
+      "quote": "The main architectural idea of PaLM-E is to inject continuous, embodied observations such as images, state estimates, or other sensor modalities into the language embedding space of a pre-trained language model."
+    },
+    {
+      "paper_sha256": "dbae359cd8028ba2065d360c06a1d3124e51f46fa038e9b4c69f2f6aa3564e11",
+      "page_number": 4,
+      "quote": "The output of PaLM-E is text generated auto-regressively by the model, which could be an answer to a question, or a sequence of decisions produced by PaLM-E in textual form that should be executed by a robot."
+    },
+    {
+      "paper_sha256": "79f82ea9ed37a16bfbf42a7cdf2ab766dc1174a3a092700bb1aa91dc8da4917e",
+      "page_number": 2,
+      "quote": "they interleave semantic-level reasoning about sub-tasks with “embodied” reasoning tasks that require the policy to pay attention to its multi-modal inputs"
+    },
+    {
+      "paper_sha256": "79f82ea9ed37a16bfbf42a7cdf2ab766dc1174a3a092700bb1aa91dc8da4917e",
+      "page_number": 4,
+      "quote": "we label data from existing robot datasets post-hoc with reasoning chains filled with features extracted from various pre-trained models and use the resulting dataset of observation-reasoning-action tuples for training."
+    }
+  ]
+}

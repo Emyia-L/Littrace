@@ -1,0 +1,24 @@
+{
+  "case_id": "ecot-problem-v1",
+  "question": "标准思维链为什么不足以直接用于机器人动作策略？",
+  "paper_sha256": [
+    "79f82ea9ed37a16bfbf42a7cdf2ab766dc1174a3a092700bb1aa91dc8da4917e"
+  ],
+  "gold_quotes": [
+    {
+      "paper_sha256": "79f82ea9ed37a16bfbf42a7cdf2ab766dc1174a3a092700bb1aa91dc8da4917e",
+      "page_number": 1,
+      "quote": "Naive use of “chain-of-thought” (CoT) style prompting is significantly less effective with standard VLAs because of the relatively simple training examples that are available to them."
+    },
+    {
+      "paper_sha256": "79f82ea9ed37a16bfbf42a7cdf2ab766dc1174a3a092700bb1aa91dc8da4917e",
+      "page_number": 2,
+      "quote": "The VLA policy needs to ground its plans and reasoning in its observations of the environment and robot state."
+    },
+    {
+      "paper_sha256": "79f82ea9ed37a16bfbf42a7cdf2ab766dc1174a3a092700bb1aa91dc8da4917e",
+      "page_number": 7,
+      "quote": "including embodied reasoning about visual inputs and the low-level robot state significantly boosts performance over the “Naïve CoT” ablation of our approach, which only reasons about high-level linguistic features like sub-task plans."
+    }
+  ]
+}

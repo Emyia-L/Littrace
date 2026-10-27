@@ -1,0 +1,24 @@
+{
+  "case_id": "autonomy-problem-v1",
+  "question": "移动操作机器人为什么需要可变自主性，主要挑战是什么？",
+  "paper_sha256": [
+    "6eddc3e934d3e6bb0558b57fb4807a9594ffd223d42e1eed7825394fa4030490"
+  ],
+  "gold_quotes": [
+    {
+      "paper_sha256": "6eddc3e934d3e6bb0558b57fb4807a9594ffd223d42e1eed7825394fa4030490",
+      "page_number": 2,
+      "quote": "Automating simple, repetitive processes can address some issues, while other conditions require manual control. Given the challenges for fully autonomous and manual systems, developing systems that can switch between human control and autonomy is logical."
+    },
+    {
+      "paper_sha256": "6eddc3e934d3e6bb0558b57fb4807a9594ffd223d42e1eed7825394fa4030490",
+      "page_number": 6,
+      "quote": "Second, studies on cognitive workload are heavily based on subjective metrics."
+    },
+    {
+      "paper_sha256": "6eddc3e934d3e6bb0558b57fb4807a9594ffd223d42e1eed7825394fa4030490",
+      "page_number": 6,
+      "quote": "Third, communication delays and reliability issues are acknowledged but not extensively addressed, which can be a very important factor to consider in time-critical situations"
+    }
+  ]
+}

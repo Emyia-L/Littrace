@@ -1,0 +1,22 @@
+{
+  "case_id": "ecot-method-v1",
+  "question": "ECoT 引入哪些具身推理步骤，论文报告了什么效果？",
+  "paper_sha256": ["79f82ea9ed37a16bfbf42a7cdf2ab766dc1174a3a092700bb1aa91dc8da4917e"],
+  "gold_quotes": [
+    {
+      "paper_sha256": "79f82ea9ed37a16bfbf42a7cdf2ab766dc1174a3a092700bb1aa91dc8da4917e",
+      "page_number": 4,
+      "quote": "We interleave several intermediate reasoning steps into the mapping from inputs to robot actions. Green: “standard” linguistic chain-of-thought steps that break a given instruction into the required sub-tasks. Purple: Embodied chain-of-thought steps that require grounding the policy’s reasoning in the scene and robot state."
+    },
+    {
+      "paper_sha256": "79f82ea9ed37a16bfbf42a7cdf2ab766dc1174a3a092700bb1aa91dc8da4917e",
+      "page_number": 4,
+      "quote": "we label data from existing robot datasets post-hoc with reasoning chains filled with features extracted from various pre-trained models and use the resulting dataset of observation-reasoning-action tuples for training."
+    },
+    {
+      "paper_sha256": "79f82ea9ed37a16bfbf42a7cdf2ab766dc1174a3a092700bb1aa91dc8da4917e",
+      "page_number": 2,
+      "quote": "Our approach increases the absolute success rate of OpenVLA [7], the current best-performing open-source VLA, by 28% across a suite of robot manipulation tasks that involve generalization to new objects, scenes, viewpoints, and instructions without any extra robot training data."
+    }
+  ]
+}

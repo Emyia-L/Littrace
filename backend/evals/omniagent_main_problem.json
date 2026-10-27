@@ -1,0 +1,24 @@
+{
+  "case_id": "omniagent-main-problem-v1",
+  "question": "这篇论文主要解决了什么问题？",
+  "paper_sha256": [
+    "ef35c9750d956e445f53d907408c23ef7afd7c07678520761b3ce0e2ae25c627"
+  ],
+  "gold_quotes": [
+    {
+      "paper_sha256": "ef35c9750d956e445f53d907408c23ef7afd7c07678520761b3ce0e2ae25c627",
+      "page_number": 1,
+      "quote": "Omnimodal large language models have made significant strides in unifying audio and visual modalities; however, they often face challenges in fine-grained cross-modal understanding and have difficulty with multimodal alignment."
+    },
+    {
+      "paper_sha256": "ef35c9750d956e445f53d907408c23ef7afd7c07678520761b3ce0e2ae25c627",
+      "page_number": 2,
+      "quote": "These methods face challenges in effectively harnessing the inherent reasoning capabilities of models for dynamic planning, thereby impeding the attainment of a fine-grained understanding."
+    },
+    {
+      "paper_sha256": "ef35c9750d956e445f53d907408c23ef7afd7c07678520761b3ce0e2ae25c627",
+      "page_number": 3,
+      "quote": "Employing an active perception strategy, it dynamically modulates attention between auditory and visual modalities, and, via a self-reflective mechanism, solves the cross-modal alignment problem."
+    }
+  ]
+}

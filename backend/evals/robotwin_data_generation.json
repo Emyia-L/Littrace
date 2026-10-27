@@ -1,0 +1,24 @@
+{
+  "case_id": "robotwin-data-generation-v1",
+  "question": "RoboTwin 2.0 如何利用多模态模型和仿真反馈自动生成双臂任务数据？",
+  "paper_sha256": [
+    "316ae82a97968e1a2d88540665401645a190d2699d7d8652e8fc0053ba609bda"
+  ],
+  "gold_quotes": [
+    {
+      "paper_sha256": "316ae82a97968e1a2d88540665401645a190d2699d7d8652e8fc0053ba609bda",
+      "page_number": 3,
+      "quote": "The system adopts a closed-loop architecture with two agents: a code-generation agent and a vision–language model (VLM) observer. The code agent synthesizes task programs from instructions, while the observer monitors execution in simulation, detects failures, and suggests corrections."
+    },
+    {
+      "paper_sha256": "316ae82a97968e1a2d88540665401645a190d2699d7d8652e8fc0053ba609bda",
+      "page_number": 4,
+      "quote": "The code-generation agent receives two complementary feedback signals: (i) a quantitative execution log and (ii) a qualitative, localized diagnostic from the VLM. It integrates these inputs to revise the program by modifying or replacing instructions identified as failure-prone."
+    },
+    {
+      "paper_sha256": "316ae82a97968e1a2d88540665401645a190d2699d7d8652e8fc0053ba609bda",
+      "page_number": 5,
+      "quote": "To enhance policy robustness to real-world variability, we apply domain randomization along five dimensions: (1) cluttered distractor objects, (2) background textures, (3) lighting conditions, (4) tabletop heights, and (5) diverse language instructions."
+    }
+  ]
+}

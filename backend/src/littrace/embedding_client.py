@@ -1,6 +1,7 @@
 from openai import OpenAI
 
 from littrace.config import get_settings
+from littrace.embedding_cache import get_cached_embedding, put_cached_embedding
 
 # 每次请求最多发送 20 个文本块，避免一次请求塞入过多内容。
 EMBEDDING_BATCH_SIZE = 20
@@ -20,9 +21,19 @@ def create_embedding_client() -> OpenAI:
     )
 
 def create_embedding(text: str) -> list[float]:
-    """把单段文本转换成向量，供单条测试或调用使用。"""
+    """为检索问题生成向量；重复输入优先读取 Redis 缓存。"""
 
-    return create_embeddings([text])[0]
+    if not text.strip():
+        raise ValueError("待转换的文本中不能包含空文本")
+
+    cached = get_cached_embedding(text)
+    if cached is not None:
+        return cached
+
+    # 缓存未命中或 Redis 暂时不可用时，沿用原有模型调用路径。
+    vector = create_embeddings([text])[0]
+    put_cached_embedding(text, vector)
+    return vector
 
 def create_embeddings(texts: list[str]) -> list[list[float]]:
     """批量把文本转换为向量，并按输入顺序返回。"""

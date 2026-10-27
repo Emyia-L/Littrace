@@ -1,0 +1,22 @@
+{
+  "case_id": "chemcrow-tools-v1",
+  "question": "ChemCrow 如何使用专门工具，其效果有哪些论文内证据？",
+  "paper_sha256": ["3b97df0a3d4fa1c73cd7ad97b60ea129388ece2b6b505aefa30a809b67946993"],
+  "gold_quotes": [
+    {
+      "paper_sha256": "3b97df0a3d4fa1c73cd7ad97b60ea129388ece2b6b505aefa30a809b67946993",
+      "page_number": 2,
+      "quote": "We implemented 18 tools, as shown in Fig. 1b and described in ‘Tools’, that endow ChemCrow not only with knowledge about molecular and reaction properties but also with the capacity to directly execute tasks in a physical lab."
+    },
+    {
+      "paper_sha256": "3b97df0a3d4fa1c73cd7ad97b60ea129388ece2b6b505aefa30a809b67946993",
+      "page_number": 2,
+      "quote": "The result is returned to the LLM prepended by the keyword ‘Observation’, and the LLM proceeds to the Thought step again. It continues iteratively until the final answer is reached."
+    },
+    {
+      "paper_sha256": "3b97df0a3d4fa1c73cd7ad97b60ea129388ece2b6b505aefa30a809b67946993",
+      "page_number": 4,
+      "quote": "ChemCrow outperforms the tool-less LLM, especially on more complex tasks where more grounded chemical reasoning is required."
+    }
+  ]
+}

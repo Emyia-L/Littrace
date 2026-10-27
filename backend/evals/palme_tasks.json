@@ -1,0 +1,22 @@
+{
+  "case_id": "palme-tasks-v1",
+  "question": "论文用哪些具身任务检验模型能力？",
+  "paper_sha256": ["dbae359cd8028ba2065d360c06a1d3124e51f46fa038e9b4c69f2f6aa3564e11"],
+  "gold_quotes": [
+    {
+      "paper_sha256": "dbae359cd8028ba2065d360c06a1d3124e51f46fa038e9b4c69f2f6aa3564e11",
+      "page_number": 6,
+      "quote": "Our three robot environments (Fig. 1) include a Task and Motion Planning (TAMP) domain where a robot has to manipulate (grasp and stack) objects, a table-top pushing environment, and a mobile manipulation domain."
+    },
+    {
+      "paper_sha256": "dbae359cd8028ba2065d360c06a1d3124e51f46fa038e9b4c69f2f6aa3564e11",
+      "page_number": 6,
+      "quote": "For all domains we consider both planning and VQA tasks in those environments."
+    },
+    {
+      "paper_sha256": "dbae359cd8028ba2065d360c06a1d3124e51f46fa038e9b4c69f2f6aa3564e11",
+      "page_number": 6,
+      "quote": "For the mobile manipulation and Language-Table environments, PaLM-E is integrated into the control loop to execute the plans in the real world, and has to adjust the plan in presence of external disturbances or failures of the low-level control policies."
+    }
+  ]
+}

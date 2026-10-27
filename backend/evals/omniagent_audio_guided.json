@@ -1,0 +1,22 @@
+{
+  "case_id": "omni-audio-guided-v1",
+  "question": "音频引导的事件定位如何帮助主动感知？",
+  "paper_sha256": ["ef35c9750d956e445f53d907408c23ef7afd7c07678520761b3ce0e2ae25c627"],
+  "gold_quotes": [
+    {
+      "paper_sha256": "ef35c9750d956e445f53d907408c23ef7afd7c07678520761b3ce0e2ae25c627",
+      "page_number": 3,
+      "quote": "This mechanism empowers the agent to autonomously query and temporally localize events across the entire audio stream, establishing temporal an- chors for subsequent fine-grained analysis."
+    },
+    {
+      "paper_sha256": "ef35c9750d956e445f53d907408c23ef7afd7c07678520761b3ce0e2ae25c627",
+      "page_number": 4,
+      "quote": "We identify the audio modality as a pivotal opportunity to address this bottleneck; unlike video, au- dio captures global context and event semantics with low cost."
+    },
+    {
+      "paper_sha256": "ef35c9750d956e445f53d907408c23ef7afd7c07678520761b3ce0e2ae25c627",
+      "page_number": 5,
+      "quote": "Event Location: TELO accepts specific queries to re- turn precise timestamps. This serves as an effective tem- poral proposal mechanism, allowing the agent to pinpoint occurrence times efficiently."
+    }
+  ]
+}

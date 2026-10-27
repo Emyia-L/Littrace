@@ -1,0 +1,24 @@
+{
+  "case_id": "palme-grounding-v1",
+  "question": "PaLM-E 如何把传感信息与语言联系起来？",
+  "paper_sha256": [
+    "dbae359cd8028ba2065d360c06a1d3124e51f46fa038e9b4c69f2f6aa3564e11"
+  ],
+  "gold_quotes": [
+    {
+      "paper_sha256": "dbae359cd8028ba2065d360c06a1d3124e51f46fa038e9b4c69f2f6aa3564e11",
+      "page_number": 2,
+      "quote": "Inputs such as images and state estimates are embedded into the same latent embedding as language tokens and processed by the self-attention layers of a Transformer-based LLM in the same way as text."
+    },
+    {
+      "paper_sha256": "dbae359cd8028ba2065d360c06a1d3124e51f46fa038e9b4c69f2f6aa3564e11",
+      "page_number": 3,
+      "quote": "This is realized by encoding the continuous observations into a sequence of vectors with the same dimension as the embedding space of the language tokens."
+    },
+    {
+      "paper_sha256": "dbae359cd8028ba2065d360c06a1d3124e51f46fa038e9b4c69f2f6aa3564e11",
+      "page_number": 4,
+      "quote": "These vectors are then interleaved with normal embedded text tokens to form the prefix for the LLM."
+    }
+  ]
+}

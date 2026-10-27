@@ -1,0 +1,22 @@
+{
+  "case_id": "robot-design-limits-v1",
+  "question": "这个设计案例显示了语言模型的哪些能力边界？",
+  "paper_sha256": ["a3e58af6fdcf3b49fa55224ebcf086e1f77800b91ecbc58d0601fd93d5b28686"],
+  "gold_quotes": [
+    {
+      "paper_sha256": "a3e58af6fdcf3b49fa55224ebcf086e1f77800b91ecbc58d0601fd93d5b28686",
+      "page_number": 2,
+      "quote": "Although LLMs can currently not generate entire CAD models, test code, or automatically fabricate the robot"
+    },
+    {
+      "paper_sha256": "a3e58af6fdcf3b49fa55224ebcf086e1f77800b91ecbc58d0601fd93d5b28686",
+      "page_number": 3,
+      "quote": "it is debatable if they can develop creative solutions that substantially advance the robotics discipline beyond what is already known by the scientiﬁc community."
+    },
+    {
+      "paper_sha256": "a3e58af6fdcf3b49fa55224ebcf086e1f77800b91ecbc58d0601fd93d5b28686",
+      "page_number": 3,
+      "quote": "it may hinder the exploration of new technological solutions."
+    }
+  ]
+}

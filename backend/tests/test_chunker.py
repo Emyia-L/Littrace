@@ -71,3 +71,15 @@ def test_chunks_do_not_cross_pages() -> None:
     ] == list(
         range(1, len(page_two_chunks) + 1)
     )
+
+
+def test_chunks_remove_pdf_nul_before_storage() -> None:
+    """PDF 文本层偶尔带 NUL；PostgreSQL text 不接受该字符。"""
+    chunks = chunk_pages(
+        pages=[PageText(page_number=1, text="alpha\x00beta gamma")],
+        paper_id="paper-nul",
+    )
+
+    assert len(chunks) == 1
+    assert chunks[0].text == "alphabeta gamma"
+    assert "\x00" not in chunks[0].text

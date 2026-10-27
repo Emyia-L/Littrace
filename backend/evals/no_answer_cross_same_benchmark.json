@@ -1,0 +1,9 @@
+{
+  "case_id": "no-answer-cross-same-benchmark-v1",
+  "question": "PaLM-E 与 ECoT 在同一机器人测试集、相同训练条件下的成功率差值是多少？",
+  "paper_sha256": [
+    "dbae359cd8028ba2065d360c06a1d3124e51f46fa038e9b4c69f2f6aa3564e11",
+    "79f82ea9ed37a16bfbf42a7cdf2ab766dc1174a3a092700bb1aa91dc8da4917e"
+  ],
+  "gold_quotes": []
+}

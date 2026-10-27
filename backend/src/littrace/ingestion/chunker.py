@@ -23,7 +23,9 @@ def chunk_pages(
 
     for page in pages:
 
-        normalized_text = " ".join(page.text.split())
+        # 某些 PDF 的文本层含有 NUL（\x00）。PostgreSQL 的 text 字段不能保存它，
+        # 而且它不是论文可见内容；在切块前移除，确保入库正文与 Embedding 输入一致。
+        normalized_text = " ".join(page.text.replace("\x00", "").split())
 
         if not normalized_text:
             continue

@@ -2,9 +2,13 @@
 
 from contextvars import ContextVar, Token
 from dataclasses import dataclass, field
+import logging
 from time import perf_counter
 from typing import Any, Callable, TypeVar
 from decimal import Decimal, ROUND_HALF_UP
+
+
+logger = logging.getLogger(__name__)
 
 
 @dataclass(frozen=True)
@@ -94,11 +98,28 @@ def tracked_model_call(
     started = perf_counter()
     response: ResponseT | None = None
     succeeded = False
+    error_type: str | None = None
     try:
         response = call()
         succeeded = True
         return response
+    except Exception as exc:
+        # 只保存异常类型，不记录异常正文：供应商报错可能包含请求信息。
+        error_type = type(exc).__name__
+        raise
     finally:
+        duration_ms = max(0, round((perf_counter() - started) * 1000))
+        if error_type is not None:
+            logger.warning(
+                "Model call failed: component=%s model=%s error_type=%s duration_ms=%d",
+                component, model, error_type, duration_ms,
+            )
+        elif succeeded:
+            logger.info(
+                "Model call completed: component=%s model=%s duration_ms=%d",
+                component, model, duration_ms,
+            )
+
         collector = _active_collector.get()
         if collector is not None:
             usage = getattr(response, "usage", None) if response is not None else None
@@ -111,6 +132,6 @@ def tracked_model_call(
                 prompt_tokens=prompt_tokens,
                 completion_tokens=completion_tokens,
                 total_tokens=reported_total or prompt_tokens + completion_tokens,
-                duration_ms=max(0, round((perf_counter() - started) * 1000)),
+                duration_ms=duration_ms,
                 succeeded=succeeded,
             ))

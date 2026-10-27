@@ -7,3 +7,5 @@ __pycache__/
 # 真实论文体积较大，且可能有再分发限制。
 # 测试会在内存中动态生成 PDF，因此不需要提交。
 samples/*.pdf
+# Local Agent benchmark runs contain generated model output and run IDs.
+evals/results/

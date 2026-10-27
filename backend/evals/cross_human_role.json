@@ -1,0 +1,30 @@
+{
+  "case_id": "cross-human-role-v1",
+  "question": "两篇论文中人的参与和系统自主性如何定位？",
+  "paper_sha256": [
+    "6eddc3e934d3e6bb0558b57fb4807a9594ffd223d42e1eed7825394fa4030490",
+    "a3e58af6fdcf3b49fa55224ebcf086e1f77800b91ecbc58d0601fd93d5b28686"
+  ],
+  "gold_quotes": [
+    {
+      "paper_sha256": "6eddc3e934d3e6bb0558b57fb4807a9594ffd223d42e1eed7825394fa4030490",
+      "page_number": 1,
+      "quote": "Many systems deployed in these environments are not fully autonomous, requiring human-robot teaming to ensure safe and reliable operations under uncertainties."
+    },
+    {
+      "paper_sha256": "6eddc3e934d3e6bb0558b57fb4807a9594ffd223d42e1eed7825394fa4030490",
+      "page_number": 2,
+      "quote": "Given the challenges for fully autonomous and manual systems, developing systems that can switch between human control and autonomy is logical."
+    },
+    {
+      "paper_sha256": "a3e58af6fdcf3b49fa55224ebcf086e1f77800b91ecbc58d0601fd93d5b28686",
+      "page_number": 1,
+      "quote": "In the first high-level phase, the computer and the human collaborate on a conceptual level, discussing ideas and outlining the specifications for the robot design"
+    },
+    {
+      "paper_sha256": "a3e58af6fdcf3b49fa55224ebcf086e1f77800b91ecbc58d0601fd93d5b28686",
+      "page_number": 2,
+      "quote": "The human is therefore relegated to the technician role, polishing the code proposed by the LLM, finalizing the CAD, and fabricating the robot."
+    }
+  ]
+}

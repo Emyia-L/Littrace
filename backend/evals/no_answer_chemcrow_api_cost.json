@@ -1,0 +1,6 @@
+{
+  "case_id": "no-answer-chemcrow-api-cost-v1",
+  "question": "ChemCrow 论文报告的全部实验 API 调用总费用是多少美元？",
+  "paper_sha256": ["3b97df0a3d4fa1c73cd7ad97b60ea129388ece2b6b505aefa30a809b67946993"],
+  "gold_quotes": []
+}

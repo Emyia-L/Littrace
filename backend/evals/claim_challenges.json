@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "description": "用已定位的 gold 引文构造论断支持性挑战；quote_index 从 1 开始。只标注预期裁决，不调用模型。",
+  "items": [
+    {
+      "id": "chemcrow-tool-count-supported",
+      "source_case_id": "chemcrow-tools-v1",
+      "quote_index": 1,
+      "claim": "ChemCrow 集成了 18 个专家设计的工具。",
+      "expected_verdict": "supported",
+      "reason": "引文明确给出 18 tools。"
+    },
+    {
+      "id": "chemcrow-tool-count-false",
+      "source_case_id": "chemcrow-tools-v1",
+      "quote_index": 1,
+      "claim": "ChemCrow 只使用了 8 个专家工具。",
+      "expected_verdict": "unsupported",
+      "reason": "引文明确给出 18，而不是 8。"
+    },
+    {
+      "id": "palme-text-only-false",
+      "source_case_id": "palme-grounding-v1",
+      "quote_index": 1,
+      "claim": "PaLM-E 只处理文本，不接收图像和状态估计。",
+      "expected_verdict": "unsupported",
+      "reason": "引文明确说图像与状态估计被嵌入模型。"
+    },
+    {
+      "id": "ecot-relative-gain-false",
+      "source_case_id": "ecot-method-v1",
+      "quote_index": 3,
+      "claim": "ECoT 在所有机器人任务中的相对成功率都提高了 28%。",
+      "expected_verdict": "unsupported",
+      "reason": "引文只报告指定泛化任务上的 absolute success rate 提升，不能改成所有任务的相对提升。"
+    },
+    {
+      "id": "robotwin-absolute-gain-false",
+      "source_case_id": "robotwin-results-v1",
+      "quote_index": 2,
+      "claim": "RoboTwin 2.0 使成功率绝对提高了 367 个百分点。",
+      "expected_verdict": "unsupported",
+      "reason": "引文报告的是相对 10 条真实示范基线提高 367%，不是绝对百分点。"
+    },
+    {
+      "id": "omni-temporal-anchor-supported",
+      "source_case_id": "omni-audio-guided-v1",
+      "quote_index": 1,
+      "claim": "音频定位为后续细粒度分析提供时间锚点。",
+      "expected_verdict": "supported",
+      "reason": "引文明确说明 temporal anchors for subsequent fine-grained analysis。"
+    }
+  ]
+}
